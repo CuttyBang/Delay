@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CB-359 Delay</title>
+  </head>
+  <body>
+    <div class="app">
+      <div class="transport_wrapper">
+        <div class="transport">
+          <button id="startButton" class="transBtn" type="button" name="button">START</button>
+          <button id="stopButton" class="transBtn" type="button" name="button">STOP</button>
+        </div>
+      </div>
+      <div class="plug flexible center middle">
+        <div id="plate" class="plate flexible middle center">
+          <div class="plate_face flexible middle start column">
+            <div class="delay_wrapper flexible middle start column">
+              <div class="spacer_container">
+                <div class="spacer flexible middle center">
+                  <!-- SPACER -->
+                </div>
+              </div>
+              <div class="top_container flexible middle center">
+
+                <div class="buttons_wrapper flexible middle center column half">
+                  <div class="buttons_container flexible middle around column">
+                    <div class="btn row flexible middle start">
+                      <div class="knob flexible center middle">
+                        <webaudio-switch  src="./images/btn_led.png" id="Digital" type="radio" name="type" group="type_button" class="button" sensitivity="0.1" enable="1" height="40" width="80"></webaudio-switch>
+                      </div>
+                    </div>
+                    <div class="btn row flexible middle start">
+                      <div class="knob flexible center middle">
+                        <webaudio-switch src="./images/btn_led.png" id="BBD" type="radio" name="type" group="type_button" class="button" sensitivity="0.1" enable="1" height="40" width="80"></webaudio-switch>
+                      </div>
+                    </div>
+                    <div class="btn row flexible middle start">
+                      <div class="knob flexible center middle">
+                        <webaudio-switch  src="./images/btn_led.png" id="Stereo" type="radio" name="type" group="type_button" class="button" sensitivity="0.1" enable="1" height="40" width="80"></webaudio-switch>
+                      </div>
+                    </div>
+                    <div class="btn row flexible middle start">
+                      <div class="knob flexible center middle">
+                        <webaudio-switch  src="./images/btn_led.png" id="Tape" type="radio" name="type" group="type_button" class="button" sensitivity="0.1" enable="1" height="40" width="80" value="1"></webaudio-switch>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="meter_wrappper half">
+                  <div class="meter_container flexible middle center">
+                    <div class="row flexible middle center">
+                      <div class="knob flexible center middle">
+                        <webaudio-knob src="./images/cb_led_meter.png" id="leftMeter" class="meter"  width="30" height="190" sprites="50" value="0" min="0" max="100" step="0.01"></webaudio-knob>
+                        <webaudio-knob src="./images/cb_led_meter.png" id="rightMeter" class="meter"  width="30" height="190" sprites="50" value="0" min="0" max="100" step="0.01"></webaudio-knob>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="cntrls" class="bottom_container">
+                <div class="knobs_wrapper flexible middle start column">
+                  <div class="top flexible middle center">
+                    <div class="row flexible middle center">
+                      <div class="knob flexible center middle">
+                        <webaudio-knob src="./images/metal2.png" id="mixKnob" class="control" sensitivity="0.1" enable="1"  diameter="100"  sprites="100" value="50" min="0" max="100" step="1"></webaudio-knob>
+                      </div>
+                      <div class="knob flexible center middle">
+                        <webaudio-knob src="./images/metal2.png" id="volKnob" class="control" sensitivity="0.1" enable="1"  diameter="100"  sprites="100" value="3" min="0" max="10" step="0.01"></webaudio-knob>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="layoutsWrapper">
+                      <!-- CONTROLS_CONTROLS_CONTROLS  -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./tuna-min.js"></script>
+    <script src="./cb_webaudio-controls.js"></script>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

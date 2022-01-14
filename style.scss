@@ -1,0 +1,162 @@
+@import './flexible.scss';
+
+.app {
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.transport_wrapper {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  top: 0;
+  left: 0;
+  .transport {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .transBtn {
+      width: 90px;
+      height: 50px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #startButton {
+      background: #0ac940;
+      color: #fff;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+    #stopButton {
+      background: #da2f2f;
+      color: #fff;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+// .plug > * {
+//   transform: scale(0.7);
+// }
+
+.plug {
+  width: 248px;
+  height: 870px;
+  margin: 0 auto;
+  .plate {
+    width: 248px;
+    height: 870px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // background: url("./images/stereo_plate.png");
+  }
+}
+
+.plate_face {
+  width: 90%;
+  height: 90%;
+}
+
+.delay_wrapper {
+  height: 100%;
+  width: 100%;
+}
+
+.spacer_container {
+  height:3%;
+  width: 100%;
+}
+
+.top_container {
+  height: 25%;
+  width: 100%;
+}
+
+.bottom_container {
+  height: 72%;
+  width: 100%;
+}
+
+.buttons_wrapper,
+.meter_wrappper {
+  height: 100%;
+  width: 100%;
+}
+
+.meter_container {
+  width: 100%;
+  height: 100%;
+}
+
+.buttons_container {
+  height: 100%;
+  width: 100%;
+}
+
+.btn {
+  width: 100%;
+  .knob {
+    margin-left: 10px;
+  }
+}
+
+.knobs_wrapper {
+  height: 100%;
+  width: 100%;
+  .top, .top_middle, .bottom_middle, .bottom {
+    position: relative;
+  }
+  .bottom_middle.tape {
+    top: -15px;
+  }
+  .bottom.tape {
+    top: -30px;
+  }
+  .bottom_middle.stereo {
+    z-index: 100;
+    top: -5px;
+  }
+  .bottom.stereo {
+    top: -35px;
+  }
+  .stereo.offset {
+    margin-top: -20px;
+  }
+  .stereo.time {
+    width: 100%;
+  }
+  .top_middle.digi {
+    top: -15px
+  }
+  .bottom_middle.digi {
+    z-index: 100;
+    top: -15px;
+  }
+  .bottom.digi {
+    top: -30px;
+    .time {
+      position: relative;
+    }
+    .feedback {
+      position: relative;
+      top: -40px;
+    }
+  }
+}
+
+#layoutsWrapper {
+  width: 100%;
+}
